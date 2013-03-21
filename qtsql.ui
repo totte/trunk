@@ -1,0 +1,491 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>QtSql</class>
+<widget class="QMainWindow">
+    <property name="name">
+        <cstring>QtSql</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>652</width>
+            <height>449</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>QtSql</string>
+    </property>
+    <property name="icon">
+        <pixmap>database.xpm</pixmap>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QSplitter">
+            <property name="name">
+                <cstring>splitter1</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+            <widget class="QListView">
+                <column>
+                    <property name="text">
+                        <string>Connections</string>
+                    </property>
+                    <property name="clickable">
+                        <bool>true</bool>
+                    </property>
+                    <property name="resizable">
+                        <bool>true</bool>
+                    </property>
+                </column>
+                <property name="name">
+                    <cstring>dbListView</cstring>
+                </property>
+            </widget>
+            <widget class="QTabWidget">
+                <property name="name">
+                    <cstring>resultsTabWidget</cstring>
+                </property>
+                <widget class="QWidget">
+                    <property name="name">
+                        <cstring>tab</cstring>
+                    </property>
+                    <attribute name="title">
+                        <string>Table Details</string>
+                    </attribute>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QTable">
+                            <column>
+                                <property name="text">
+                                    <string>Name</string>
+                                </property>
+                            </column>
+                            <column>
+                                <property name="text">
+                                    <string>Type</string>
+                                </property>
+                            </column>
+                            <column>
+                                <property name="text">
+                                    <string>Length</string>
+                                </property>
+                            </column>
+                            <column>
+                                <property name="text">
+                                    <string>Default</string>
+                                </property>
+                            </column>
+                            <column>
+                                <property name="text">
+                                    <string>Null</string>
+                                </property>
+                            </column>
+                            <column>
+                                <property name="text">
+                                    <string>Key</string>
+                                </property>
+                            </column>
+                            <property name="name">
+                                <cstring>metaDataTable</cstring>
+                            </property>
+                            <property name="numRows">
+                                <number>1</number>
+                            </property>
+                            <property name="numCols">
+                                <number>6</number>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+                <widget class="QWidget">
+                    <property name="name">
+                        <cstring>tab</cstring>
+                    </property>
+                    <attribute name="title">
+                        <string>Data</string>
+                    </attribute>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QDataTable">
+                            <property name="name">
+                                <cstring>contentsTable</cstring>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+                <widget class="QWidget">
+                    <property name="name">
+                        <cstring>TabPage</cstring>
+                    </property>
+                    <attribute name="title">
+                        <string>SQL</string>
+                    </attribute>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QSplitter">
+                            <property name="name">
+                                <cstring>splitter5</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Vertical</enum>
+                            </property>
+                            <widget class="QFrame">
+                                <property name="name">
+                                    <cstring>frame4</cstring>
+                                </property>
+                                <property name="frameShape">
+                                    <enum>StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                    <enum>Raised</enum>
+                                </property>
+                                <vbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QSplitter">
+                                        <property name="name">
+                                            <cstring>splitter3</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Vertical</enum>
+                                        </property>
+                                        <widget class="QTextEdit">
+                                            <property name="name">
+                                                <cstring>queryEditor</cstring>
+                                            </property>
+                                        </widget>
+                                        <widget class="QDataTable">
+                                            <property name="name">
+                                                <cstring>resultsTable</cstring>
+                                            </property>
+                                        </widget>
+                                    </widget>
+                                </vbox>
+                            </widget>
+                            <widget class="QFrame">
+                                <property name="name">
+                                    <cstring>frame5</cstring>
+                                </property>
+                                <property name="frameShape">
+                                    <enum>StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                    <enum>Plain</enum>
+                                </property>
+                                <property name="lineWidth">
+                                    <number>0</number>
+                                </property>
+                                <vbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QListBox">
+                                        <property name="name">
+                                            <cstring>historyList</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>7</hsizetype>
+                                                <vsizetype>7</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                    </widget>
+                                </vbox>
+                            </widget>
+                        </widget>
+                    </vbox>
+                </widget>
+            </widget>
+        </widget>
+    </vbox>
+</widget>
+<menubar>
+    <property name="name">
+        <cstring>MenuBar</cstring>
+    </property>
+    <item text="&amp;File" name="fileMenu">
+        <action name="fileNewAction"/>
+        <action name="fileOpen_QueryAction"/>
+        <action name="fileSave_ResultsAction"/>
+        <action name="fileExecuteAction"/>
+        <action name="fileExitAction"/>
+    </item>
+    <item text="&amp;Help" name="helpMenu">
+        <action name="helpAboutAction"/>
+    </item>
+    <separator/>
+</menubar>
+<toolbars>
+    <toolbar dock="2">
+        <property name="name">
+            <cstring>toolBar</cstring>
+        </property>
+        <property name="label">
+            <string>Tools</string>
+        </property>
+        <action name="fileNewAction"/>
+        <separator/>
+    </toolbar>
+</toolbars>
+<actions>
+    <action>
+        <property name="name">
+            <cstring>fileNewAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>filenew.xpm</iconset>
+        </property>
+        <property name="text">
+            <string>New Connection</string>
+        </property>
+        <property name="menuText">
+            <string>New Connection</string>
+        </property>
+        <property name="whatsThis">
+            <string>Create a new databas connection</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+N</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileExitAction</cstring>
+        </property>
+        <property name="text">
+            <string>Exit</string>
+        </property>
+        <property name="menuText">
+            <string>E&amp;xit</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+X</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>helpContentsAction</cstring>
+        </property>
+        <property name="text">
+            <string>Contents</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Contents...</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>helpIndexAction</cstring>
+        </property>
+        <property name="text">
+            <string>Index</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Index...</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>helpAboutAction</cstring>
+        </property>
+        <property name="text">
+            <string>About</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;About</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileExecuteAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>execute.xpm</iconset>
+        </property>
+        <property name="text">
+            <string>Execute</string>
+        </property>
+        <property name="menuText">
+            <string>Execute</string>
+        </property>
+        <property name="whatsThis">
+            <string>Execute the current SQL statement</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+E</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menunew_itemAction</cstring>
+        </property>
+        <property name="text">
+            <string>new item</string>
+        </property>
+        <property name="menuText">
+            <string>new item</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menunew_itemAction_2</cstring>
+        </property>
+        <property name="text">
+            <string>new item</string>
+        </property>
+        <property name="menuText">
+            <string>new item</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileOpen_QueryAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>fileopen.xpm</iconset>
+        </property>
+        <property name="text">
+            <string>Open Query</string>
+        </property>
+        <property name="menuText">
+            <string>Open Query</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+O</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileSave_ResultsAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>filesave.xpm</iconset>
+        </property>
+        <property name="text">
+            <string>Save Results</string>
+        </property>
+        <property name="menuText">
+            <string>Save Results</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+S</string>
+        </property>
+    </action>
+</actions>
+<connections>
+    <connection>
+        <sender>fileExitAction</sender>
+        <signal>activated()</signal>
+        <receiver>QtSql</receiver>
+        <slot>quit()</slot>
+    </connection>
+    <connection>
+        <sender>helpAboutAction</sender>
+        <signal>activated()</signal>
+        <receiver>QtSql</receiver>
+        <slot>about()</slot>
+    </connection>
+    <connection>
+        <sender>fileExecuteAction</sender>
+        <signal>activated()</signal>
+        <receiver>QtSql</receiver>
+        <slot>execute()</slot>
+    </connection>
+    <connection>
+        <sender>historyList</sender>
+        <signal>doubleClicked(QListBoxItem*)</signal>
+        <receiver>QtSql</receiver>
+        <slot>setSQLText()</slot>
+    </connection>
+    <connection>
+        <sender>fileNewAction</sender>
+        <signal>activated()</signal>
+        <receiver>QtSql</receiver>
+        <slot>newConnection()</slot>
+    </connection>
+    <connection>
+        <sender>dbListView</sender>
+        <signal>contextMenuRequested(QListViewItem*,const QPoint&amp;,int)</signal>
+        <receiver>QtSql</receiver>
+        <slot>dbListView_contextMenuRequested(QListViewItem*,const QPoint&amp;,int)</slot>
+    </connection>
+    <connection>
+        <sender>fileOpen_QueryAction</sender>
+        <signal>activated()</signal>
+        <receiver>QtSql</receiver>
+        <slot>getSQLFileName()</slot>
+    </connection>
+    <connection>
+        <sender>fileSave_ResultsAction</sender>
+        <signal>activated()</signal>
+        <receiver>QtSql</receiver>
+        <slot>saveResult()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="global" impldecl="in declaration">qsqldatabase.h</include>
+    <include location="global" impldecl="in declaration">qsqlrecord.h</include>
+    <include location="local" impldecl="in declaration">typemap.h</include>
+    <include location="global" impldecl="in declaration">qmessagebox.h</include>
+    <include location="local" impldecl="in declaration">connectiontool.h</include>
+    <include location="global" impldecl="in declaration">qurl.h</include>
+    <include location="global" impldecl="in declaration">qfiledialog.h</include>
+    <include location="local" impldecl="in implementation">qtsql.ui.h</include>
+</includes>
+<variables>
+    <variable access="private">QMap &lt;QString, QSqlDatabase*&gt; dbmap;</variable>
+    <variable access="private">QMap &lt;QString, QString&gt; configmap;</variable>
+    <variable access="private">QString activeDBName;</variable>
+    <variable access="private">QString homeDir;</variable>
+    <variable access="private">QString fqConfigFileName;</variable>
+    <variable access="private">QString fqHistoryFileName;</variable>
+</variables>
+<slots>
+    <slot specifier="non virtual">setConfig( QMap&lt;QString, QString&gt; * conf )</slot>
+    <slot>addDB( QString cnctName )</slot>
+    <slot specifier="non virtual">addDBDetail( QListViewItem * dbnode )</slot>
+    <slot specifier="non virtual">showTableInfo( QListViewItem * item )</slot>
+    <slot specifier="non virtual">about()</slot>
+    <slot specifier="non virtual">newConnection()</slot>
+    <slot specifier="non virtual">quit()</slot>
+    <slot specifier="non virtual">execute()</slot>
+    <slot specifier="non virtual">setSQLText()</slot>
+    <slot specifier="non virtual">initialise()</slot>
+    <slot specifier="non virtual">rescan()</slot>
+    <slot specifier="non virtual">editConnection()</slot>
+    <slot>dbListView_contextMenuRequested( QListViewItem * item, const QPoint &amp; location, int state )</slot>
+    <slot specifier="non virtual">deleteConnection()</slot>
+    <slot specifier="non virtual">refreshConnection()</slot>
+    <slot>saveHistory()</slot>
+    <slot>getSQLFileName()</slot>
+    <slot specifier="non virtual">saveResult()</slot>
+</slots>
+<functions>
+    <function returnType="bool">createSkeleton( QString fileName )</function>
+    <function specifier="non virtual">readHistory()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="3" margin="5"/>
+</UI>
